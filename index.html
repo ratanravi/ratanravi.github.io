@@ -1,132 +1,401 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ravi Dubey · Websites for Clinics</title>
-<meta name="description" content="Professional, mobile-friendly websites for clinics, with WhatsApp booking, Google Maps and your own web address. Free preview before you pay.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ravi Dubey · Websites for clinics</title>
+<meta name="description" content="Websites for dentists and skin clinics across India. I build your clinic's website first, and you pay only if you want it live.">
+<meta property="og:title" content="Your clinic's website, built before you pay">
+<meta property="og:description" content="Websites for dentists and skin clinics across India, with WhatsApp booking, Google Maps and your own web address.">
+<meta property="og:image" content="https://ratanravi.github.io/og.jpg">
+<meta name="theme-color" content="#0E5E4E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E5E4E'/%3E%3Cpath d='M22 46V18h11a9 9 0 0 1 0 18h-11m11 0 10 10' stroke='%23F4A926' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#14201f;--mut:#5a6866;--line:#e3e9e8;--p:#0f5257;--p2:#167a80;--soft:#eaf4f3;--acc:#d9a441}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fbfcfc;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.serif,h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.015em}
-nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
-.mark{width:38px;height:38px;border-radius:11px;background:var(--p);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-size:18px}
-.brand small{display:block;font-weight:500;color:var(--mut);font-size:12px}
-.hero{padding:70px 0 90px;background:radial-gradient(900px 480px at 85% -10%,var(--soft),transparent 60%)}
-.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--p2);background:var(--soft);padding:7px 14px;border-radius:999px}
-h1{font-size:clamp(38px,5.4vw,64px);line-height:1.05;margin:22px 0 18px;max-width:820px}
-h1 em{color:var(--p2)}
-.lead{font-size:19px;color:var(--mut);max-width:640px}
-.points{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;font-size:15px;font-weight:500}
-.points span:before{content:"✓";color:var(--p2);font-weight:700;margin-right:8px}
-section{padding:84px 0}
-.k{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p2)}
-h2{font-size:clamp(30px,3.6vw,42px);line-height:1.12;margin:10px 0 14px}
-.intro{color:var(--mut);max-width:620px;font-size:17px;margin-bottom:44px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
-.card h3{font-size:18px;margin:6px 0 6px}
-.card p{color:var(--mut);font-size:15px}
-.num{font-family:Fraunces,serif;font-size:38px;color:var(--p2);opacity:.4;line-height:1}
-.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
-.feat div{padding:14px 0;border-bottom:1px solid var(--line);font-weight:500}
-.feat div span{display:block;font-weight:400;color:var(--mut);font-size:14.5px}
-.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.shot{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 40px -28px rgba(20,32,31,.4)}
-.shot img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top}
-.shot p{padding:14px 16px;font-size:14px;color:var(--mut)}
-.shot b{color:var(--ink)}
-.price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-.plan{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column}
-.plan.hl{background:var(--p);color:#fff;border-color:var(--p)}
-.plan .amt{font-family:Fraunces,serif;font-size:42px;margin:8px 0 2px}
-.plan .per{font-size:14px;opacity:.7;margin-bottom:18px}
-.plan ul{list-style:none;font-size:15px}
-.plan li{padding:7px 0;border-top:1px solid rgba(127,127,127,.18)}
-.plan li:before{content:"✓ ";color:var(--acc);font-weight:700}
-.dark{background:var(--ink);color:#fff;border-radius:36px;margin:0 16px}
-.dark .intro{color:#ffffffaa}
-details{border-bottom:1px solid var(--line);padding:18px 0;max-width:820px}
-summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none}
+:root{
+  --green:#0E5E4E; --green-2:#147A66; --ink:#15241F; --muted:#51605B; --paper:#F7F8F6;
+  --mint:#DDEFE7; --mint-2:#EEF6F2; --gold:#F4A926; --line:#D5DEDA; --white:#fff;
+  --fh:'Bricolage Grotesque',system-ui,sans-serif; --fb:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{overflow-x:clip;font-family:var(--fb);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--fh);color:var(--ink);letter-spacing:-.02em;line-height:1.05;font-weight:800}
+h2{font-size:clamp(32px,4.4vw,52px);max-width:16ch}
+h3{font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+p{max-width:62ch}
+.lede{font-size:19px;color:var(--muted)}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:40px;height:40px}
+.brand b{font-family:var(--fh);font-size:19px;font-weight:700;letter-spacing:-.01em;display:block;line-height:1.1}
+.brand span{font-size:13.5px;color:var(--muted)}
+.top nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:20px 0 72px}
+.hero h1{font-size:clamp(42px,5.6vw,72px);max-width:12ch}
+.hero .lede{margin-top:20px;max-width:46ch}
+.try{margin-top:30px;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:24px;max-width:560px}
+.try label,.try .lab{display:block;font-weight:600;font-size:15px;margin-bottom:8px}
+.try input{width:100%;font:inherit;font-size:18px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.try input:focus{outline:none;border-color:var(--green);background:#fff;box-shadow:0 0 0 4px var(--mint)}
+.try .lab{margin-top:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:500;padding:8px 13px 8px 9px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.chip i{width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.try small{display:block;margin-top:16px;color:var(--muted);font-size:14px}
+
+.stage{position:relative;display:flex;justify-content:center}
+.stage::before{content:"";position:absolute;inset:8% -4% 4% 6%;background:var(--mint);border-radius:48px;transform:rotate(-4deg)}
+.phone{position:relative;width:330px;height:680px;background:var(--ink);border-radius:52px;padding:13px;box-shadow:0 40px 80px -30px rgba(14,94,78,.55),0 0 0 1px rgba(0,0,0,.08)}
+.phone::after{content:"";position:absolute;top:24px;left:50%;width:96px;height:26px;margin-left:-48px;background:var(--ink);border-radius:20px;z-index:2}
+.screen{position:relative;width:100%;height:100%;border-radius:40px;overflow:hidden;background:#fff}
+.sbar{position:absolute;top:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:4px 30px 0;font-size:13px;font-weight:600;background:#fff;color:var(--ink);z-index:1;transition:background .25s}
+.sbar i{display:flex;gap:3px;align-items:flex-end}.sbar i b{width:3px;background:currentColor;border-radius:1px}
+.screen iframe{position:absolute;top:40px;left:0;width:390px;border:0;transform-origin:0 0;transition:opacity .25s}
+.screen iframe.loading{opacity:0}
+.toast{position:absolute;left:12px;right:12px;bottom:18px;z-index:3;background:var(--ink);color:#fff;font-size:14px;line-height:1.45;padding:12px 14px;border-radius:14px;opacity:0;transform:translateY(8px);transition:.25s;pointer-events:none}
+.toast.on{opacity:1;transform:none}
+
+/* promises row */
+.promises{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.promises div{padding:26px 28px 26px 0}
+.promises div+div{padding-left:28px;border-left:1px solid var(--line)}
+.promises b{font-family:var(--fh);font-size:24px;letter-spacing:-.01em;display:block;line-height:1.15}
+.promises span{color:var(--muted);font-size:15.5px}
+
+section{padding:104px 0}
+
+/* patients */
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.split .lede{margin-top:20px}
+.list{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.list div{padding:22px 0;border-top:1px solid var(--line)}
+.list h3{display:flex;gap:12px;align-items:center}
+.list h3 svg{flex:none;width:28px;height:28px;color:var(--green)}
+.list p{margin-top:6px;color:var(--muted);font-size:16px}
+
+/* steps */
+.steps-sec{background:var(--green);color:#E6F2EE}
+.steps-sec h2{color:#fff}
+.steps{list-style:none;padding:0;margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s}
+.steps li{position:relative;padding:0 32px 0 0;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:var(--fh);font-weight:800;font-size:22px;position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:26px;left:52px;right:0;height:2px;background:rgba(255,255,255,.22)}
+.steps li:last-child::after{display:none}
+.steps h3{color:#fff;margin-top:22px;font-size:24px}
+.steps p{margin-top:10px;color:#CBE3DB;max-width:32ch}
+
+/* designs */
+.designs{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:48px}
+.designs button{all:unset;cursor:pointer;display:block}
+.designs .shot{aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;position:relative}
+.designs iframe{position:absolute;top:0;left:0;width:390px;height:694px;border:0;transform-origin:0 0;pointer-events:none}
+.designs b{display:block;margin-top:12px;font-family:var(--fh);font-size:18px}
+.designs span{font-size:14.5px;color:var(--muted)}
+.designs button:hover .shot{border-color:var(--ink)}
+.designs button:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:22px}
+
+/* pricing */
+.pricing{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+.plan{border:1.5px solid var(--line);border-radius:28px;padding:36px;background:var(--paper)}
+.plan.feature{background:var(--ink);border-color:var(--ink);color:#D9E4E0}
+.plan.feature h3,.plan.feature .amt{color:#fff}
+.plan .who{font-size:15.5px;color:var(--muted);margin-top:6px}
+.plan.feature .who{color:#A9BDB6}
+.amt{font-family:var(--fh);font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1;margin-top:26px;color:var(--ink)}
+.amt small{font-family:var(--fb);font-size:16px;font-weight:500;letter-spacing:0;color:var(--muted);margin-left:6px}
+.plan.feature .amt small{color:#A9BDB6}
+.plan ul{list-style:none;padding:0;margin-top:28px;display:grid;gap:12px}
+.plan li{display:flex;gap:12px;font-size:16px}
+.plan li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m6 10.5 2.6 2.6L14 7.5' stroke='%230E5E4E' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.plan.feature li::before{background-color:var(--gold)}
+.care{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;margin-top:24px;padding:24px 36px;border:1.5px dashed var(--line);border-radius:28px}
+.care b{font-family:var(--fh);font-size:21px}
+.care p{color:var(--muted);font-size:16px}
+.care .amt{font-size:32px;margin:0}
+.fine{margin-top:22px;font-size:15px;color:var(--muted)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.faq>*,.split>*{min-width:0}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-family:var(--fh);font-weight:700;font-size:20px;letter-spacing:-.01em}
 summary::-webkit-details-marker{display:none}
-details p{color:var(--mut);margin-top:8px}
-footer{padding:40px 0 60px;color:var(--mut);font-size:14px;text-align:center}
-@media(max-width:900px){.grid3,.shots,.price{grid-template-columns:1fr}.feat{grid-template-columns:1fr}.dark{margin:0;border-radius:0}}
+summary::after{content:"+";flex:none;width:24px;height:24px;display:grid;place-items:center;font-family:var(--fb);font-weight:400;font-size:28px;line-height:.9;color:var(--green);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;color:var(--muted)}
+
+/* end */
+.end{background:var(--ink);color:#C9D6D1;padding:96px 0}
+.end .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end}
+.end h2{color:#fff;max-width:18ch}
+.end p{margin-top:18px;font-size:18px}
+.wa{display:flex;gap:16px;align-items:flex-start;background:#1E302A;border-radius:22px;padding:22px}
+.wa svg{flex:none;width:44px;height:44px}
+.wa b{color:#fff;font-family:var(--fh);font-size:19px;display:block}
+.wa span{font-size:15.5px}
+footer{background:var(--ink);color:#8FA39C;font-size:14px;border-top:1px solid #2A3D37;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;gap:44px;padding-bottom:64px}
+  .hero h1{max-width:13ch}
+  .stage{order:2}
+  .stage::before{inset:8% 7% 4% 7%}
+  .split,.faq{grid-template-columns:1fr;gap:28px}
+  .designs{grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+  .designs button{scroll-snap-align:start}
+  .end .wrap{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .top nav{display:none}
+  .phone{width:290px;height:600px;border-radius:46px;padding:11px}
+  .screen{border-radius:36px}
+  .phone::after{top:21px;width:84px;height:22px;margin-left:-42px}
+  .promises{grid-template-columns:1fr}
+  .promises div,.promises div+div{padding:18px 0;border-left:0}
+  .promises div+div{border-top:1px solid var(--line)}
+  .list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:36px}
+  .steps li{padding:0 0 0 72px}
+  .steps li::before{position:absolute;left:0;top:0}
+  .steps li::after{display:none}
+  .steps h3{margin-top:10px}
+  .plans{grid-template-columns:1fr}
+  .plan{padding:28px}
+  .care{padding:22px 28px}
+  .try{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="wrap"><nav>
-  <div class="brand"><span class="mark">R</span><span>Ravi Dubey<small>Websites for clinics</small></span></div>
-</nav></header>
 
-<section class="hero"><div class="wrap">
-  <span class="eyebrow">Bokaro, Jharkhand · Working with clinics across India</span>
-  <h1>A professional website for your clinic, <em>ready before you pay.</em></h1>
-  <p class="lead">I design fast, mobile-friendly websites for doctors and clinics, with WhatsApp booking, Google Maps and your own web address. You see your finished site first, and pay only if you like it.</p>
-  <div class="points"><span>Free preview first</span><span>Live in 48 hours</span><span>One-time price</span><span>You own your domain</span></div>
-</div></section>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#" aria-label="Ravi Dubey, websites for clinics">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0E5E4E"/><path d="M22 46V18h11a9 9 0 0 1 0 18h-11m11 0 10 10" stroke="#F4A926" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Ravi Dubey</b><span>Websites for clinics</span></div>
+    </a>
+    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#designs">Designs</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+  </header>
 
-<section style="padding-top:0"><div class="wrap">
-  <span class="k">How it works</span><h2>Simple, honest, no risk</h2>
-  <p class="intro">Most clinics are busy. So I do the work first and you decide.</p>
-  <div class="grid3">
-    <div class="card"><div class="num">01</div><h3>I build your preview</h3><p>Using your clinic's public details: treatments, doctors, timings and location.</p></div>
-    <div class="card"><div class="num">02</div><h3>You review & request changes</h3><p>Tell me what to change on WhatsApp: photos, text, colours, anything.</p></div>
-    <div class="card"><div class="num">03</div><h3>Go live on your own domain</h3><p>Pay once, and your site goes live on your own address (like yourclinic.in) within 48 hours.</p></div>
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Your clinic's website, built before you pay.</h1>
+      <p class="lede">I make websites for dentists and skin clinics across India. I build yours first from your public details, and you pay only if you want it live.</p>
+
+      <div class="try">
+        <label for="cname">Type your clinic's name to see it</label>
+        <input id="cname" type="text" autocomplete="organization" placeholder="e.g. Sharma Dental Clinic" maxlength="48">
+        <span class="lab" id="dlab">Choose a design</span>
+        <div class="chips" role="group" aria-labelledby="dlab">
+          <button class="chip" type="button" data-s="sample-dental" aria-pressed="true"><i style="background:#0f5257"></i>Calm</button>
+          <button class="chip" type="button" data-s="sample-skin" aria-pressed="false"><i style="background:#7a3e8f"></i>Bold</button>
+          <button class="chip" type="button" data-s="sample-dark" aria-pressed="false"><i style="background:#14263b"></i>Night</button>
+          <button class="chip" type="button" data-s="sample-soft" aria-pressed="false"><i style="background:#3a6db0"></i>Family</button>
+          <button class="chip" type="button" data-s="sample-classic" aria-pressed="false"><i style="background:#5b4a8b"></i>Classic</button>
+        </div>
+        <small>This is a working website. Scroll inside the phone and try the booking form.</small>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="phone">
+        <div class="screen" id="screen">
+          <div class="sbar" id="sbar"><span>9:41</span><i aria-hidden="true"><b style="height:5px"></b><b style="height:7px"></b><b style="height:9px"></b><b style="height:11px"></b></i></div>
+          <iframe id="live" title="Live preview of a clinic website" src="s/sample-dental/" loading="eager"></iframe>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div></section>
 
-<section style="padding-top:0"><div class="wrap">
-  <span class="k">What you get</span><h2>Everything a clinic website needs</h2>
-  <div class="feat" style="margin-top:30px">
-    <div>WhatsApp appointment booking<span>Patients send their name, concern and preferred time in one tap.</span></div>
-    <div>Works perfectly on phones<span>Most patients search on mobile, so every site is built mobile-first.</span></div>
-    <div>Live "Open now" status<span>Shows your real timings and highlights today.</span></div>
-    <div>Google Maps & directions<span>Patients find you without calling for the address.</span></div>
-    <div>Treatments, doctors & FAQs<span>Answers patients' questions before they call.</span></div>
-    <div>Google-friendly setup<span>Structured data that helps search engines understand your clinic.</span></div>
-    <div>Fast & secure (HTTPS)<span>Loads quickly, with the padlock patients trust.</span></div>
-    <div>Your own web address<span>Registered in your name. You stay in control.</span></div>
+  <div class="promises">
+    <div><b>See it before you pay</b><span>Your complete website, ready to review.</span></div>
+    <div><b>One-time price from ₹4,999</b><span>Your web address included for the first year.</span></div>
+    <div><b>Live within 2 days</b><span>Once you approve it and pay.</span></div>
   </div>
-</div></section>
+  </main>
+</div>
 
-<section style="padding-top:0"><div class="wrap">
-  <span class="k">Sample designs</span><h2>Every clinic gets its own look</h2>
-  <p class="intro">No copy-paste templates. These are example designs (sample clinic names) to show the range of styles.</p>
-  <div class="shots">
-    <div class="shot"><img src="sample-dental.jpg" alt="Sample dental clinic design" loading="lazy"><p><b>Editorial</b> · warm and trustworthy</p></div>
-    <div class="shot"><img src="sample-skin.jpg" alt="Sample skin clinic design" loading="lazy"><p><b>Bold</b> · premium and confident</p></div>
-    <div class="shot"><img src="sample-dark.jpg" alt="Sample modern clinic design" loading="lazy"><p><b>Modern dark</b> · high-tech feel</p></div>
+<section id="patients">
+  <div class="wrap split">
+    <div>
+      <h2>What patients can do on your site</h2>
+      <p class="lede">Most patients find a clinic on their phone. Your site answers their questions and gets them to book, without a phone call.</p>
+    </div>
+    <div class="list">
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z"/><path d="M9 10h6M9 13.5h4"/></svg>Book on WhatsApp</h3><p>They pick a treatment, day and time. The message arrives on your WhatsApp, already filled in.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>See if you're open now</h3><p>Your real timings, with today highlighted and a live open or closed sign.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Find you on the map</h3><p>Directions open in Google Maps with one tap.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Call in one tap</h3><p>A call button stays on screen while they scroll.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Read about treatments</h3><p>Your treatments, doctors and answers to common questions, in plain language.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></svg>Find you on Google</h3><p>Built with the details search engines look for, on your own .in or .com address.</p></div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="dark"><div class="wrap">
-  <span class="k" style="color:var(--acc)">Pricing</span><h2>One-time price. No surprises.</h2>
-  <p class="intro">The web address (domain) is registered in your clinic's name, usually ₹500–1,200 a year, paid directly by you.</p>
-  <div class="price">
-    <div class="plan"><div>Clinic Website</div><div class="amt">₹4,999</div><div class="per">one-time</div>
-      <ul><li>Complete single-page website</li><li>WhatsApp booking & Google Maps</li><li>Your own domain connected</li><li>Changes within 7 days of launch</li></ul></div>
-    <div class="plan hl"><div>Premium Clinic</div><div class="amt">₹9,999</div><div class="per">one-time</div>
-      <ul><li>Everything in Clinic Website</li><li>Premium custom design</li><li>Your photos & detailed treatment pages</li><li>Priority changes for 30 days</li></ul></div>
-    <div class="plan"><div>Monthly Care</div><div class="amt">₹999</div><div class="per">per month · optional</div>
-      <ul><li>Updates to timings, offers & photos</li><li>New treatment or doctor sections</li><li>Hosting & uptime checks</li><li>Cancel anytime</li></ul></div>
+<section class="steps-sec" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><h3>I build your website</h3><p>From your Google listing: treatments, doctors, timings and location. I send you the link on WhatsApp.</p></li>
+      <li><h3>You ask for changes</h3><p>Photos, text, colours, timings. Reply on WhatsApp and I update it. You still haven't paid anything.</p></li>
+      <li><h3>Pay once, go live</h3><p>Pay by UPI or bank transfer. Your site goes live on your own web address within 2 days.</p></li>
+    </ol>
   </div>
-</div></section>
+</section>
 
-<section><div class="wrap">
-  <span class="k">Questions</span><h2>Frequently asked</h2>
-  <details open><summary>Do I pay before seeing the website?</summary><p>No. You see your complete preview first. You pay only if you want it to go live.</p></details>
-  <details><summary>Who owns the website and domain?</summary><p>You do. The domain is registered in your clinic's name.</p></details>
-  <details><summary>Can I change the text, photos or colours?</summary><p>Yes. Send changes on WhatsApp, and they're done before launch.</p></details>
-  <details><summary>How do I pay?</summary><p>By UPI or bank transfer, after you approve your website.</p></details>
-</div></section>
+<section id="designs">
+  <div class="wrap">
+    <h2>Every clinic gets its own look</h2>
+    <p class="lede" style="margin-top:20px">Colours, fonts and layout are chosen to suit your clinic. These are five starting points, shown with sample clinic names. Tap one to try it in the phone above.</p>
+    <div class="designs">
+      <button type="button" data-s="sample-dental"><div class="shot"><iframe src="s/sample-dental/" title="Calm design" loading="lazy" tabindex="-1"></iframe></div><b>Calm</b><span>Warm and reassuring</span></button>
+      <button type="button" data-s="sample-skin"><div class="shot"><iframe src="s/sample-skin/" title="Bold design" loading="lazy" tabindex="-1"></iframe></div><b>Bold</b><span>Confident and premium</span></button>
+      <button type="button" data-s="sample-dark"><div class="shot"><iframe src="s/sample-dark/" title="Night design" loading="lazy" tabindex="-1"></iframe></div><b>Night</b><span>Modern, high-tech</span></button>
+      <button type="button" data-s="sample-soft"><div class="shot"><iframe src="s/sample-soft/" title="Family design" loading="lazy" tabindex="-1"></iframe></div><b>Family</b><span>Friendly and bright</span></button>
+      <button type="button" data-s="sample-classic"><div class="shot"><iframe src="s/sample-classic/" title="Classic design" loading="lazy" tabindex="-1"></iframe></div><b>Classic</b><span>Traditional and trusted</span></button>
+    </div>
+  </div>
+</section>
 
-<footer>© Ravi Dubey · Websites for clinics · Bokaro, Jharkhand</footer>
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <h2>One price. Paid once.</h2>
+    <p class="lede" style="margin-top:20px">You pay only after you've seen and approved your website.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Clinic website</h3>
+        <p class="who">For dental and general clinics</p>
+        <div class="amt">₹4,999<small>one-time</small></div>
+        <ul>
+          <li>Complete website, designed for your clinic</li>
+          <li>WhatsApp booking, call button and Google Maps</li>
+          <li>Your own web address, first year included</li>
+          <li>Free changes for 7 days after launch</li>
+        </ul>
+      </div>
+      <div class="plan feature">
+        <h3>Specialist clinic</h3>
+        <p class="who">For skin, hair, cosmetic and multi-speciality clinics</p>
+        <div class="amt">₹9,999<small>one-time</small></div>
+        <ul>
+          <li>Everything in the clinic website</li>
+          <li>Detailed treatment sections for each service</li>
+          <li>Your own clinic and doctor photos</li>
+          <li>Free changes for 30 days after launch</li>
+        </ul>
+      </div>
+    </div>
+    <div class="care">
+      <div><b>Monthly updates, if you want them</b><p>New offers, timings, photos or doctors, updated whenever you message. Cancel anytime.</p></div>
+      <div class="amt">₹999<small>/month</small></div>
+    </div>
+    <p class="fine">From the second year, you only renew your web address, usually ₹800–1,000 a year. The address is registered in your clinic's name.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <h2>Questions doctors ask</h2>
+    <div>
+      <details open><summary>Do I pay before seeing the website?</summary><p>No. You see your complete website first, ask for any changes, and pay only if you want it to go live.</p></details>
+      <details><summary>How did you get my clinic's details?</summary><p>From your public Google listing and patient reviews. Before going live, you check every detail and correct anything.</p></details>
+      <details><summary>Who owns the website and web address?</summary><p>You do. The web address is registered in your clinic's name, and you can take the website to anyone else later.</p></details>
+      <details><summary>Can I change the photos, text or colours?</summary><p>Yes. Send changes on WhatsApp and I update the site. You can see every change before paying.</p></details>
+      <details><summary>Will patients still be able to book on WhatsApp if I'm busy?</summary><p>Yes. Booking requests arrive as WhatsApp messages with the patient's name, concern and preferred time, so you or your staff can reply when free.</p></details>
+      <details><summary>How do I pay?</summary><p>By UPI or bank transfer, after you approve your website.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="end">
+  <div class="wrap">
+    <div>
+      <h2>Got a website preview from me?</h2>
+      <p>Reply in the same WhatsApp chat with any changes, or to make it live. I usually reply within a few hours.</p>
+    </div>
+    <div class="wa">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#25D366"/><path d="M34.6 13.4A14.8 14.8 0 0 0 11.3 31.3L9.2 39l7.9-2.1a14.8 14.8 0 0 0 7 1.8 14.8 14.8 0 0 0 10.5-25.3zM24.1 36.2a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a12.3 12.3 0 1 1 10.5 5.9zm6.7-9.2c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2l-1.2 1.4c-.2.3-.4.3-.8.1a10 10 0 0 1-5-4.4c-.4-.6.4-.6 1.1-2 .1-.2.1-.5 0-.7l-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7a1.3 1.3 0 0 0-1 .5 4.1 4.1 0 0 0-1.3 3.1 7.2 7.2 0 0 0 1.5 3.8 16.4 16.4 0 0 0 6.3 5.5c2.3 1 3.2 1.1 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z" fill="#fff"/></svg>
+      <div><b>Ravi Dubey</b><span>Bokaro, Jharkhand. Making websites for clinics across India.</span></div>
+    </div>
+  </div>
+</div>
+<footer><div class="wrap"><span>© 2026 Ravi Dubey</span><span>Sample designs use made-up clinic names.</span></div></footer>
+
+<script>
+(function(){
+  var live=document.getElementById('live'), screen=document.getElementById('screen'),
+      input=document.getElementById('cname'), sbar=document.getElementById('sbar'), toast=document.getElementById('toast'),
+      chips=[].slice.call(document.querySelectorAll('.chip')), cache=[], names=null, t;
+
+  function fit(){ var s=screen.clientWidth/390; live.style.transform='scale('+s+')'; live.style.height=((screen.clientHeight-40)/s)+'px'; }
+  function fitThumbs(){ document.querySelectorAll('.designs .shot').forEach(function(el){ var f=el.firstElementChild, s=el.clientWidth/390; f.style.transform='scale('+s+')'; f.style.height=(el.clientHeight/s)+'px'; }); }
+  document.querySelectorAll('.designs iframe').forEach(function(f){ f.addEventListener('load',function(){ try{ var st=f.contentDocument.createElement('style'); st.textContent='.ribbon{display:none!important}'; f.contentDocument.head.appendChild(st);}catch(e){} }); });
+  window.addEventListener('resize',function(){fit();fitThumbs();}); fit(); fitThumbs();
+
+  function say(msg){ toast.textContent=msg; toast.classList.add('on'); clearTimeout(t); t=setTimeout(function(){toast.classList.remove('on')},3600); }
+
+  function apply(){
+    if(!names) return;
+    var v=input.value.trim();
+    cache.forEach(function(c){
+      c.n.nodeValue = v ? c.o.split(names.full).map(function(p){return p.split(names.short).join(v)}).join(v) : c.o;
+    });
+  }
+
+  function hook(){
+    var d; try{ d=live.contentDocument; }catch(e){ return; }
+    if(!d||!d.body) return;
+    var ld=d.querySelector('script[type="application/ld+json"]'), full='', short='';
+    try{ full=JSON.parse(ld.textContent).name; }catch(e){}
+    var b=d.querySelector('.brand b, header b'); short=b?b.textContent.trim():full;
+    names={full:full,short:short}; cache=[];
+    var w=d.createTreeWalker(d.body,NodeFilter.SHOW_TEXT), n;
+    while(n=w.nextNode()){ if(full&&n.nodeValue.indexOf(full)>-1 || short&&n.nodeValue.indexOf(short)>-1) cache.push({n:n,o:n.nodeValue}); }
+    d.addEventListener('click',function(e){
+      var a=e.target.closest&&e.target.closest('a[href^="https://wa.me"],a[href^="tel:"],a[href*="maps"]');
+      if(!a) return; e.preventDefault();
+      var h=a.getAttribute('href');
+      say(h.indexOf('tel:')===0?'On your site, this calls your clinic.':h.indexOf('wa.me')>-1?'On your site, this opens WhatsApp with the booking details filled in.':'On your site, this opens directions in Google Maps.');
+    },true);
+    d.addEventListener('submit',function(e){ e.preventDefault(); e.stopPropagation(); say('On your site, this sends the patient’s booking to your WhatsApp, already filled in.'); },true);
+    var st=d.createElement('style'); st.textContent='.ribbon{display:none!important}'; d.head.appendChild(st);
+    var bg=getComputedStyle(d.body).backgroundColor, m=bg.match(/\d+/g)||[255,255,255], lum=(+m[0]*299+ +m[1]*587+ +m[2]*114)/1000;
+    sbar.style.background=bg; sbar.style.color=lum<128?'#fff':'#15241F';
+    apply(); live.classList.remove('loading');
+  }
+  live.addEventListener('load',hook);
+  if(live.contentDocument&&live.contentDocument.readyState==='complete') hook();
+
+  function show(slug){
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.s===slug?'true':'false'); });
+    live.classList.add('loading'); names=null; live.src='s/'+slug+'/';
+  }
+  chips.forEach(function(c){ c.addEventListener('click',function(){ show(c.dataset.s); }); });
+  document.querySelectorAll('.designs button').forEach(function(b){ b.addEventListener('click',function(){ show(b.dataset.s); document.querySelector('.hero').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }); });
+  input.addEventListener('input',apply);
+})();
+</script>
 </body>
 </html>
