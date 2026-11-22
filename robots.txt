@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /s/
+Sitemap: https://ratanravi.github.io/sitemap.xml

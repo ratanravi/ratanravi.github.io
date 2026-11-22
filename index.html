@@ -9,6 +9,15 @@
 <meta property="og:description" content="Websites for dentists and skin clinics across India, with WhatsApp booking, Google Maps and your own web address.">
 <meta property="og:image" content="https://ratanravi.github.io/og.jpg">
 <meta name="theme-color" content="#0E5E4E">
+<link rel="canonical" href="https://ratanravi.github.io/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ratanravi.github.io/">
+<meta property="og:site_name" content="Ravi Dubey · Websites for clinics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Ravi Dubey · Websites for clinics","url":"https://ratanravi.github.io/","image":"https://ratanravi.github.io/og.jpg","description":"Websites for dentists and skin clinics across India, built before you pay.","founder":{"@type":"Person","name":"Ravi Dubey"},"address":{"@type":"PostalAddress","addressLocality":"Bokaro","addressRegion":"Jharkhand","addressCountry":"IN"},"areaServed":"IN","priceRange":"₹4,999–₹9,999","makesOffer":[{"@type":"Offer","name":"Clinic website","price":"4999","priceCurrency":"INR"},{"@type":"Offer","name":"Specialist clinic website","price":"9999","priceCurrency":"INR"}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E5E4E'/%3E%3Cpath d='M22 46V18h11a9 9 0 0 1 0 18h-11m11 0 10 10' stroke='%23F4A926' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -53,11 +62,20 @@ p{max-width:62ch}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:500;padding:8px 13px 8px 9px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
 .chip i{width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.chip:hover{border-color:var(--ink)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.full{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--green);text-underline-offset:3px}
+.screen .wait{position:absolute;inset:40px 0 0;display:grid;place-items:center;color:var(--muted);font-size:14px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;z-index:9}
+.skip:focus{left:8px}
+.cta{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;background:#1FA855;color:#fff;padding:13px 20px;border-radius:999px}
+.cta:hover{background:#178a45}
+[data-wa][hidden]{display:none!important}
 .chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
 .try small{display:block;margin-top:16px;color:var(--muted);font-size:14px}
 
 .stage{position:relative;display:flex;justify-content:center}
-.stage::before{content:"";position:absolute;inset:8% -4% 4% 6%;background:var(--mint);border-radius:48px;transform:rotate(-4deg)}
+.stage::before{content:"";position:absolute;inset:8% 0 4% 6%;background:var(--mint);border-radius:48px;transform:rotate(-4deg)}
 .phone{position:relative;width:330px;height:680px;background:var(--ink);border-radius:52px;padding:13px;box-shadow:0 40px 80px -30px rgba(14,94,78,.55),0 0 0 1px rgba(0,0,0,.08)}
 .phone::after{content:"";position:absolute;top:24px;left:50%;width:96px;height:26px;margin-left:-48px;background:var(--ink);border-radius:20px;z-index:2}
 .screen{position:relative;width:100%;height:100%;border-radius:40px;overflow:hidden;background:#fff}
@@ -115,8 +133,8 @@ section{padding:104px 0}
 .plan.feature h3,.plan.feature .amt{color:#fff}
 .plan .who{font-size:15.5px;color:var(--muted);margin-top:6px}
 .plan.feature .who{color:#A9BDB6}
-.amt{font-family:var(--fh);font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1;margin-top:26px;color:var(--ink)}
-.amt small{font-family:var(--fb);font-size:16px;font-weight:500;letter-spacing:0;color:var(--muted);margin-left:6px}
+.amt{font-family:var(--fh);font-weight:800;font-size:clamp(44px,13vw,60px);letter-spacing:-.03em;line-height:1;margin-top:26px;color:var(--ink)}
+.amt small{display:inline-block;font-family:var(--fb);font-size:16px;font-weight:500;letter-spacing:0;color:var(--muted);margin-left:6px}
 .plan.feature .amt small{color:#A9BDB6}
 .plan ul{list-style:none;padding:0;margin-top:28px;display:grid;gap:12px}
 .plan li{display:flex;gap:12px;font-size:16px}
@@ -165,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:720px){
   body{font-size:16px}
   section{padding:72px 0}
-  .top nav{display:none}
+  .top nav a:not(.keep){display:none}
   .phone{width:290px;height:600px;border-radius:46px;padding:11px}
   .screen{border-radius:36px}
   .phone::after{top:21px;width:84px;height:22px;margin-left:-42px}
@@ -187,6 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <div class="wrap">
   <header class="top">
@@ -194,10 +213,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0E5E4E"/><path d="M22 46V18h11a9 9 0 0 1 0 18h-11m11 0 10 10" stroke="#F4A926" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div><b>Ravi Dubey</b><span>Websites for clinics</span></div>
     </a>
-    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#designs">Designs</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#designs">Designs</a><a class="keep" href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
   </header>
 
-  <main>
+  <main id="main">
   <div class="hero">
     <div>
       <h1>Your clinic's website, built before you pay.</h1>
@@ -215,6 +234,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <button class="chip" type="button" data-s="sample-classic" aria-pressed="false"><i style="background:#5b4a8b"></i>Classic</button>
         </div>
         <small>This is a working website. Scroll inside the phone and try the booking form.</small>
+        <a class="full" id="full" href="s/sample-dental/" target="_blank" rel="noopener">Open this design full screen</a>
       </div>
     </div>
 
@@ -222,7 +242,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="phone">
         <div class="screen" id="screen">
           <div class="sbar" id="sbar"><span>9:41</span><i aria-hidden="true"><b style="height:5px"></b><b style="height:7px"></b><b style="height:9px"></b><b style="height:11px"></b></i></div>
-          <iframe id="live" title="Live preview of a clinic website" src="s/sample-dental/" loading="eager"></iframe>
+          <div class="wait" aria-hidden="true">Loading design…</div>
+          <iframe id="live" title="Live preview of a clinic website" src="s/sample-dental/" loading="eager" tabindex="-1"></iframe>
           <div class="toast" id="toast" role="status" aria-live="polite"></div>
         </div>
       </div>
@@ -334,6 +355,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div>
       <h2>Got a website preview from me?</h2>
       <p>Reply in the same WhatsApp chat with any changes, or to make it live. I usually reply within a few hours.</p>
+      <p data-wa hidden style="margin-top:26px"><a class="cta" href="#" data-wa-link>Message me on WhatsApp</a></p>
     </div>
     <div class="wa">
       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#25D366"/><path d="M34.6 13.4A14.8 14.8 0 0 0 11.3 31.3L9.2 39l7.9-2.1a14.8 14.8 0 0 0 7 1.8 14.8 14.8 0 0 0 10.5-25.3zM24.1 36.2a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a12.3 12.3 0 1 1 10.5 5.9zm6.7-9.2c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2l-1.2 1.4c-.2.3-.4.3-.8.1a10 10 0 0 1-5-4.4c-.4-.6.4-.6 1.1-2 .1-.2.1-.5 0-.7l-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7a1.3 1.3 0 0 0-1 .5 4.1 4.1 0 0 0-1.3 3.1 7.2 7.2 0 0 0 1.5 3.8 16.4 16.4 0 0 0 6.3 5.5c2.3 1 3.2 1.1 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z" fill="#fff"/></svg>
@@ -341,7 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </div>
 </div>
-<footer><div class="wrap"><span>© 2026 Ravi Dubey</span><span>Sample designs use made-up clinic names.</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Ravi Dubey · Bokaro, Jharkhand</span><span>Sample designs use made-up clinic names.</span><span><a href="privacy/">Privacy & terms</a> · <a href="#main">Back to top</a></span></div></footer>
 
 <script>
 (function(){
@@ -390,11 +412,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   function show(slug){
     chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.s===slug?'true':'false'); });
-    live.classList.add('loading'); names=null; live.src='s/'+slug+'/';
+    live.classList.add('loading'); names=null; live.src='s/'+slug+'/'; document.getElementById('full').href='s/'+slug+'/';
   }
   chips.forEach(function(c){ c.addEventListener('click',function(){ show(c.dataset.s); }); });
   document.querySelectorAll('.designs button').forEach(function(b){ b.addEventListener('click',function(){ show(b.dataset.s); document.querySelector('.hero').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }); });
   input.addEventListener('input',apply);
+  // Ravi's WhatsApp number, digits only with country code (e.g. 919800000000). Leave empty to hide the buttons.
+  var WA='';
+  if(WA){ document.querySelectorAll('[data-wa]').forEach(function(e){e.hidden=false}); document.querySelectorAll('[data-wa-link]').forEach(function(a){ a.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Hi Ravi, I saw your website for clinics. I would like one for my clinic.'); }); }
 })();
 </script>
 </body>
