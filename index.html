@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ravi Dubey · Websites for Clinics</title>
+<meta name="description" content="Professional, mobile-friendly websites for clinics, with WhatsApp booking, Google Maps and your own web address. Free preview before you pay.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14201f;--mut:#5a6866;--line:#e3e9e8;--p:#0f5257;--p2:#167a80;--soft:#eaf4f3;--acc:#d9a441}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fbfcfc;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.serif,h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.015em}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.mark{width:38px;height:38px;border-radius:11px;background:var(--p);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-size:18px}
+.brand small{display:block;font-weight:500;color:var(--mut);font-size:12px}
+.hero{padding:70px 0 90px;background:radial-gradient(900px 480px at 85% -10%,var(--soft),transparent 60%)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--p2);background:var(--soft);padding:7px 14px;border-radius:999px}
+h1{font-size:clamp(38px,5.4vw,64px);line-height:1.05;margin:22px 0 18px;max-width:820px}
+h1 em{color:var(--p2)}
+.lead{font-size:19px;color:var(--mut);max-width:640px}
+.points{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;font-size:15px;font-weight:500}
+.points span:before{content:"✓";color:var(--p2);font-weight:700;margin-right:8px}
+section{padding:84px 0}
+.k{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p2)}
+h2{font-size:clamp(30px,3.6vw,42px);line-height:1.12;margin:10px 0 14px}
+.intro{color:var(--mut);max-width:620px;font-size:17px;margin-bottom:44px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+.card h3{font-size:18px;margin:6px 0 6px}
+.card p{color:var(--mut);font-size:15px}
+.num{font-family:Fraunces,serif;font-size:38px;color:var(--p2);opacity:.4;line-height:1}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
+.feat div{padding:14px 0;border-bottom:1px solid var(--line);font-weight:500}
+.feat div span{display:block;font-weight:400;color:var(--mut);font-size:14.5px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.shot{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 40px -28px rgba(20,32,31,.4)}
+.shot img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.shot p{padding:14px 16px;font-size:14px;color:var(--mut)}
+.shot b{color:var(--ink)}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column}
+.plan.hl{background:var(--p);color:#fff;border-color:var(--p)}
+.plan .amt{font-family:Fraunces,serif;font-size:42px;margin:8px 0 2px}
+.plan .per{font-size:14px;opacity:.7;margin-bottom:18px}
+.plan ul{list-style:none;font-size:15px}
+.plan li{padding:7px 0;border-top:1px solid rgba(127,127,127,.18)}
+.plan li:before{content:"✓ ";color:var(--acc);font-weight:700}
+.dark{background:var(--ink);color:#fff;border-radius:36px;margin:0 16px}
+.dark .intro{color:#ffffffaa}
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:820px}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none}
+summary::-webkit-details-marker{display:none}
+details p{color:var(--mut);margin-top:8px}
+footer{padding:40px 0 60px;color:var(--mut);font-size:14px;text-align:center}
+@media(max-width:900px){.grid3,.shots,.price{grid-template-columns:1fr}.feat{grid-template-columns:1fr}.dark{margin:0;border-radius:0}}
+</style>
+</head>
+<body>
+<header class="wrap"><nav>
+  <div class="brand"><span class="mark">R</span><span>Ravi Dubey<small>Websites for clinics</small></span></div>
+</nav></header>
+
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">Bokaro, Jharkhand · Working with clinics across India</span>
+  <h1>A professional website for your clinic, <em>ready before you pay.</em></h1>
+  <p class="lead">I design fast, mobile-friendly websites for doctors and clinics, with WhatsApp booking, Google Maps and your own web address. You see your finished site first, and pay only if you like it.</p>
+  <div class="points"><span>Free preview first</span><span>Live in 48 hours</span><span>One-time price</span><span>You own your domain</span></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <span class="k">How it works</span><h2>Simple, honest, no risk</h2>
+  <p class="intro">Most clinics are busy. So I do the work first and you decide.</p>
+  <div class="grid3">
+    <div class="card"><div class="num">01</div><h3>I build your preview</h3><p>Using your clinic's public details: treatments, doctors, timings and location.</p></div>
+    <div class="card"><div class="num">02</div><h3>You review & request changes</h3><p>Tell me what to change on WhatsApp: photos, text, colours, anything.</p></div>
+    <div class="card"><div class="num">03</div><h3>Go live on your own domain</h3><p>Pay once, and your site goes live on your own address (like yourclinic.in) within 48 hours.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <span class="k">What you get</span><h2>Everything a clinic website needs</h2>
+  <div class="feat" style="margin-top:30px">
+    <div>WhatsApp appointment booking<span>Patients send their name, concern and preferred time in one tap.</span></div>
+    <div>Works perfectly on phones<span>Most patients search on mobile, so every site is built mobile-first.</span></div>
+    <div>Live "Open now" status<span>Shows your real timings and highlights today.</span></div>
+    <div>Google Maps & directions<span>Patients find you without calling for the address.</span></div>
+    <div>Treatments, doctors & FAQs<span>Answers patients' questions before they call.</span></div>
+    <div>Google-friendly setup<span>Structured data that helps search engines understand your clinic.</span></div>
+    <div>Fast & secure (HTTPS)<span>Loads quickly, with the padlock patients trust.</span></div>
+    <div>Your own web address<span>Registered in your name. You stay in control.</span></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <span class="k">Sample designs</span><h2>Every clinic gets its own look</h2>
+  <p class="intro">No copy-paste templates. These are example designs (sample clinic names) to show the range of styles.</p>
+  <div class="shots">
+    <div class="shot"><img src="sample-dental.jpg" alt="Sample dental clinic design" loading="lazy"><p><b>Editorial</b> · warm and trustworthy</p></div>
+    <div class="shot"><img src="sample-skin.jpg" alt="Sample skin clinic design" loading="lazy"><p><b>Bold</b> · premium and confident</p></div>
+    <div class="shot"><img src="sample-dark.jpg" alt="Sample modern clinic design" loading="lazy"><p><b>Modern dark</b> · high-tech feel</p></div>
+  </div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <span class="k" style="color:var(--acc)">Pricing</span><h2>One-time price. No surprises.</h2>
+  <p class="intro">The web address (domain) is registered in your clinic's name, usually ₹500–1,200 a year, paid directly by you.</p>
+  <div class="price">
+    <div class="plan"><div>Clinic Website</div><div class="amt">₹4,999</div><div class="per">one-time</div>
+      <ul><li>Complete single-page website</li><li>WhatsApp booking & Google Maps</li><li>Your own domain connected</li><li>Changes within 7 days of launch</li></ul></div>
+    <div class="plan hl"><div>Premium Clinic</div><div class="amt">₹9,999</div><div class="per">one-time</div>
+      <ul><li>Everything in Clinic Website</li><li>Premium custom design</li><li>Your photos & detailed treatment pages</li><li>Priority changes for 30 days</li></ul></div>
+    <div class="plan"><div>Monthly Care</div><div class="amt">₹999</div><div class="per">per month · optional</div>
+      <ul><li>Updates to timings, offers & photos</li><li>New treatment or doctor sections</li><li>Hosting & uptime checks</li><li>Cancel anytime</li></ul></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="k">Questions</span><h2>Frequently asked</h2>
+  <details open><summary>Do I pay before seeing the website?</summary><p>No. You see your complete preview first. You pay only if you want it to go live.</p></details>
+  <details><summary>Who owns the website and domain?</summary><p>You do. The domain is registered in your clinic's name.</p></details>
+  <details><summary>Can I change the text, photos or colours?</summary><p>Yes. Send changes on WhatsApp, and they're done before launch.</p></details>
+  <details><summary>How do I pay?</summary><p>By UPI or bank transfer, after you approve your website.</p></details>
+</div></section>
+
+<footer>© Ravi Dubey · Websites for clinics · Bokaro, Jharkhand</footer>
+</body>
+</html>
